@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38427D"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noImeEditText"
+        app:layout_constraintVertical_bias="0.765"
+        app:rowCount="4">
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_4"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_5" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_6" />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_9"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_8"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_7"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_1"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_2"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_3"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/button0"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/_0"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/buttonComma"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/comma"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/delete"
+            app:layout_column="2"
+            app:layout_row="3" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <com.example.first.NoImeEditText
+        android:id="@+id/noImeEditText"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noImeEditText2" />
+
+    <com.example.first.NoImeEditText
+        android:id="@+id/noImeEditText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTranslate"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="205dp"
+        android:layout_height="46dp"
+        android:background="@drawable/rounded_corner"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noImeEditText"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="68dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/noImeEditText2"
+        app:layout_constraintStart_toEndOf="@+id/noImeEditText2" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="68dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/noImeEditText"
+        app:layout_constraintStart_toEndOf="@+id/noImeEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
