@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingsFragment">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="30dp"
+            android:text="@string/dark_mode"
+            android:textSize="25sp" />
+
+        <Switch
+            android:id="@+id/setting_dark_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingEnd="30dp"
+            android:text="@string/font_size"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/setting_decrease_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-10%" />
+
+        <Button
+            android:id="@+id/setting_increase_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+10%" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingEnd="30dp"
+            android:text="@string/language"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/setting_en_locale_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En" />
+
+        <Button
+            android:id="@+id/setting_ru_locale_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ru" />
+    </TableRow>
+
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        <Button
+            android:id="@+id/setting_clear_data_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_data" />
+    </TableRow>
+
+</TableLayout>

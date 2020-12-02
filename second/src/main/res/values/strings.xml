@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">second</string>
+    <string name="effort_rest">rest</string>
+    <string name="effort_none">none</string>
+    <string name="effor_hard">hard</string>
+    <string name="effor_calm" />
+    <string name="add_word">+</string>
+    <string name="hint_title">Title...</string>
+    <string name="button_save">Save</string>
+    <string name="caption_edit_effort">Effort</string>
+    <string name="caption_edit_duration">Duration</string>
+    <string name="caption_edit_exercise_name">Name</string>
+    <string name="heading_edit_exercise">Edit Exercise</string>
+    <string name="caption_edit_program_name">Title</string>
+    <string name="caption_edit_program_color">Color</string>
+    <string name="heading_edit_program">Edit Program</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="caption_current_exercise">Current</string>
+    <string name="caption_next_exercise">Next</string>
+    <string name="start">start</string>
+    <string name="pause">Pause</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="font_size">Font Size</string>
+    <string name="clear_data">Clear data</string>
+    <string name="language">Language</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+</resources>
