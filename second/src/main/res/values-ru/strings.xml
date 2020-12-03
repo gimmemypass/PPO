@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">second</string>
+    <string name="effort_rest">отдых</string>
+    <string name="effort_none">none</string>
+    <string name="effor_hard">тяжело</string>
+    <string name="effor_calm" />
+    <string name="add_word">+</string>
+    <string name="hint_title">Заголовок...</string>
+    <string name="button_save">Сохранить</string>
+    <string name="caption_edit_effort">Нагрузка</string>
+    <string name="caption_edit_duration">Продолжительность</string>
+    <string name="caption_edit_exercise_name">Название</string>
+    <string name="heading_edit_exercise">Изменить Упражнение</string>
+    <string name="caption_edit_program_name">Заголовок</string>
+    <string name="caption_edit_program_color">Цвет</string>
+    <string name="heading_edit_program">Изменить Программу</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="caption_current_exercise">Текущее</string>
+    <string name="caption_next_exercise">Слудующее</string>
+    <string name="start">Старт</string>
+    <string name="pause">Пауза</string>
+    <string name="dark_mode">Темная тема</string>
+    <string name="font_size">Размер</string>
+    <string name="clear_data">Очистить данные</string>
+    <string name="language">Язык</string>
+    <string name="play">Старт</string>
+    <string name="stop">Стоп</string>
+</resources>
