@@ -47,6 +47,7 @@ class UserViewModel(application: Application) : AndroidViewModel(application){
                      userInfo.name = map["name"].toString()
                      userInfo.email = map["email"].toString()
                      userInfo.avatar = map["avatar"].toString()
+                     userInfo.useGravatar = map["useGravatar"].toString().toBoolean()
                      userInfo.uid = map["uid"].toString()
                      if(map["games"] != null)
                         userInfo.games = map["games"] as MutableList<Boolean>
@@ -78,7 +79,13 @@ class UserViewModel(application: Application) : AndroidViewModel(application){
             Toast.makeText(getApplication(), "Please Select an Image", Toast.LENGTH_SHORT).show()
         }
     }
-
+    public fun isGravatarSource() : Boolean{
+        return userInfo.useGravatar
+    }
+    public fun setUseGravatar(isChecked : Boolean){
+        userInfo.useGravatar = isChecked
+        dbRef.child("${userInfo.uid}/useGravatar").setValue(isChecked)
+    }
     public fun getImagePath() : String{
         if(userInfo.avatar.isEmpty())
             return ""

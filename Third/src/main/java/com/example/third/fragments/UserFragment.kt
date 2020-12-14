@@ -12,10 +12,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,7 +45,7 @@ class UserFragment : Fragment() {
     private lateinit var gamesAdapter : UserGamesListAdapter
     private lateinit var nameText : TextView
     private lateinit var imageView: ImageView
-    private lateinit var gravatarButton: Button
+    private lateinit var useGravatarSwitch: Switch
     private var filePath: Uri? = null
     private val PICK_IMAGE_REQUEST = 1
     private val userViewModel : UserViewModel by activityViewModels()
@@ -62,7 +59,7 @@ class UserFragment : Fragment() {
         gamesAdapter.setGames(userViewModel.getGames())
         recyclerView = view.findViewById(R.id.user_recyclerView)
         imageView = view.findViewById(R.id.user_imagePreview)
-        gravatarButton = view.findViewById(R.id.user_gravatarButton)
+        useGravatarSwitch = view.findViewById(R.id.user_useGravatarSwitch)
         recyclerView.apply{
             layoutManager = LinearLayoutManager(context)
             adapter = gamesAdapter
@@ -74,14 +71,17 @@ class UserFragment : Fragment() {
         imageView.setOnClickListener {
             imagePick()
         }
-        gravatarButton.setOnClickListener {
-            val hash = Utils.md5(Firebase.auth.currentUser?.email!!)
-            val gravatarUrl = "https://s.gravatar.com/avatar/$hash?s=80"
-            Picasso.with(requireContext())
-                .load(gravatarUrl)
-                .into(imageView)
+
+        useGravatarSwitch.setOnCheckedChangeListener{_, isChecked ->
+            if(isChecked){
+                downloadFromGravatar()
+            }
+            else{
+                downloadFromFirebase()
+            }
+            userViewModel.setUseGravatar(isChecked)
         }
-        DownloadImage()
+        useGravatarSwitch.isChecked = userViewModel.isGravatarSource()
         return view
     }
 
@@ -90,6 +90,14 @@ class UserFragment : Fragment() {
         intent.type = "image/*"
         intent.action = Intent.ACTION_GET_CONTENT
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST)
+    }
+
+    private fun downloadFromGravatar(){
+        val hash = Utils.md5(Firebase.auth.currentUser?.email!!)
+        val gravatarUrl = "https://s.gravatar.com/avatar/$hash?s=80"
+        Picasso.with(requireContext())
+            .load(gravatarUrl)
+            .into(imageView)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -109,7 +117,7 @@ class UserFragment : Fragment() {
             }
         }
     }
-    public fun DownloadImage() {
+    private fun downloadFromFirebase() {
         val path = userViewModel.getImagePath()
         if(path.isEmpty())
             return

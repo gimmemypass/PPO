@@ -15,11 +15,13 @@
         android:layout_marginTop="10dp"
         android:src="@mipmap/ic_launcher" />
 
-    <Button
-        android:id="@+id/user_gravatarButton"
+    <Switch
+        android:id="@+id/user_useGravatarSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="from gravatar" />
+        android:text="Use Gravatar"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/user_nameTextView"

@@ -9,5 +9,6 @@ data class UserInfo (
     var email: String = "",
     var uid : String = "",
     var avatar : String = "",
+    var useGravatar : Boolean = false,
     var games : MutableList<Boolean> = mutableListOf<Boolean>()
 )
