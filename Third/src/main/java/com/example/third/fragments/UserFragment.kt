@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.third.R
 import com.example.third.UserGamesListAdapter
 import com.example.third.UserViewModel
+import com.example.third.utils.Utils
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.ktx.auth
@@ -34,6 +35,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
+import com.squareup.picasso.Picasso
 import java.io.File
 import java.io.IOException
 import java.util.*
@@ -46,6 +48,7 @@ class UserFragment : Fragment() {
     private lateinit var gamesAdapter : UserGamesListAdapter
     private lateinit var nameText : TextView
     private lateinit var imageView: ImageView
+    private lateinit var gravatarButton: Button
     private var filePath: Uri? = null
     private val PICK_IMAGE_REQUEST = 1
     private val userViewModel : UserViewModel by activityViewModels()
@@ -59,6 +62,7 @@ class UserFragment : Fragment() {
         gamesAdapter.setGames(userViewModel.getGames())
         recyclerView = view.findViewById(R.id.user_recyclerView)
         imageView = view.findViewById(R.id.user_imagePreview)
+        gravatarButton = view.findViewById(R.id.user_gravatarButton)
         recyclerView.apply{
             layoutManager = LinearLayoutManager(context)
             adapter = gamesAdapter
@@ -69,6 +73,13 @@ class UserFragment : Fragment() {
         })
         imageView.setOnClickListener {
             imagePick()
+        }
+        gravatarButton.setOnClickListener {
+            val hash = Utils.md5(Firebase.auth.currentUser?.email!!)
+            val gravatarUrl = "https://s.gravatar.com/avatar/$hash?s=80"
+            Picasso.with(requireContext())
+                .load(gravatarUrl)
+                .into(imageView)
         }
         DownloadImage()
         return view
