@@ -3,8 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply from: '../git.gradle'
 
-def tag = getLastTag()
-def patch = getPatch()
+//def tag = getLastTag()
+//def patch = getPatch()
 
 android {
     compileSdkVersion 30
@@ -20,8 +20,10 @@ android {
         applicationId "com.example.first"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode generateVersionCode(tag, patch)
-        versionName "${tag}.${patch}"
+        versionCode 1
+        versionName "1.0"
+//        versionCode generateVersionCode(tag, patch)
+//        versionName "${tag}.${patch}"
         //versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

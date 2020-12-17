@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1024723937363",
+    "project_id": "thirdlab-e1621",
+    "storage_bucket": "thirdlab-e1621.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024723937363:android:f0ac987c07881c34ca7ea6",
+        "android_client_info": {
+          "package_name": "com.example.third"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024723937363-s9gt5i5e80ptgf9kib9hev5ck05eri9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxtURmL-x64z3TQuIqTR45-eap80UzFN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024723937363-s9gt5i5e80ptgf9kib9hev5ck05eri9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
